@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+   xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+      http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+   <!-- Root Context: defines shared resources visible to all other web components -->
+   <!-- DB를 연결하는 설정을 작성하는 파일 -->   
+   
+   <!-- bean 태그 : 객체를 생성하기 위한 태그 -->
+
+   <!-- 1. HikariConfig에 대한 객체 생성 -->
+   <!-- java) HikariConfig hicariConfig = new HikariConfig(url, id, pw); -->
+   <bean class="com.zaxxer.hikari.HikariConfig" id="hikariConfig">
+      <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+      <property name="jdbcUrl" value="jdbc:mysql://project-db-cgi.smhrd.com:3307/MPD" />
+      <property name="username" value="MPD"/>
+      <property name="password" value="15987" />
+   </bean>
+   
+   <!-- 
+   		핵심 프로젝트 DB 주소
+		URL : project-db-cgi.smhrd.com
+		PORT : 3307
+		USER : MPD
+		PW : 15987
+		DataBase : MPD
+    -->
+   
+   
+   
+   
+</beans>
