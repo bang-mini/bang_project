@@ -1,10 +1,12 @@
 package com.pp.controller;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +15,9 @@ import com.pp.db.MemberMapper;
 import com.pp.model.MemberDTO;
 import com.pp.model.MyUser;
 
+
+@MapperScan("com.pp.db")
+@RequestMapping
 @RestController
 @CrossOrigin
 public class MemberRestController {
@@ -25,8 +30,7 @@ public class MemberRestController {
 
 	@GetMapping("/login")
 	public int login(@RequestParam("id") String id, @RequestParam("pw") String pw) {
-		System.out.println(id);
-		System.out.println(pw);
+		System.out.println("로그인 요청됨: " + id + ", " + pw);
 
 		int result = 0;
 //  if(로그인성공조건){
