@@ -18,6 +18,23 @@
       <property name="password" value="15987" />
    </bean>
    
+   
+   <!-- 2. HikariCP를 통해 DataSource 객체 생성 -->
+   <!-- DBCP 생성! -->
+   <!-- java) HikariDataSource dataSource = new HikariDataSource(hikariConfig) -->
+   <bean class="com.zaxxer.hikari.HikariDataSource" id="dataSource">
+      <constructor-arg ref="hikariConfig"/>
+   </bean>
+   
+   <!-- 3. SqlSessionFactory Bean 객체 생성 -->
+   <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+      <property name="dataSource" ref="dataSource"/>
+   </bean>
+   
+   <!-- 4. Mapper 파일 연결하기 -->
+   <!-- 실행하고자 하는 sql 문장을 정리해 둔 파일 -> Mapper.xml -->
+    <mybatis-spring:scan base-package="com.smhrd.db"/>
+   
    <!-- 
    		핵심 프로젝트 DB 주소
 		URL : project-db-cgi.smhrd.com
