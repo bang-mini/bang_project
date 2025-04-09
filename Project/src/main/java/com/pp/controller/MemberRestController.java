@@ -19,7 +19,7 @@ import com.pp.model.MyUser;
 @MapperScan("com.pp.db")
 @RequestMapping
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000")
 public class MemberRestController {
 
 	@Autowired

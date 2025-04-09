@@ -14,7 +14,7 @@
 	
 	<!-- 로그인이가능한 sql 문장 -->
 	<select id="login" parameterType="com.pp.model.MemberDTO"
-		resultType="com.smhrd.model.MemberDTO">
+		resultType="com.pp.model.MemberDTO">
 		select * from Member where email=#{email} and pw=#{pw} 
 	</select>
 	
@@ -31,7 +31,7 @@
 		delete from Member where email=#{email}
 	</delete>
 	
-	<select id="checkEmail" parameterType="String" resultType="com.smhrd.model.MemberDTO">
+	<select id="checkEmail" parameterType="String" resultType="com.pp.model.MemberDTO">
 		select * from Member where email=#{email}
 		
 	</select>
