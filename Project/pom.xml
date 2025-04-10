@@ -20,9 +20,9 @@
 
 	<!-- 라이브러리 추가 위치! -->
 	<dependencies>
-	
-	
-		<!-- JSON DATA를 사용하기 위한 라이브러리  -->
+
+
+		<!-- JSON DATA를 사용하기 위한 라이브러리 -->
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
@@ -61,6 +61,12 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.47</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version>
 		</dependency>
 
 		<!-- mybatis 라이브러리 -->

@@ -12,7 +12,7 @@
    <!-- 1. HikariConfig에 대한 객체 생성 -->
    <!-- java) HikariConfig hicariConfig = new HikariConfig(url, id, pw); -->
    <bean class="com.zaxxer.hikari.HikariConfig" id="hikariConfig">
-      <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+      <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
       <property name="jdbcUrl" value="jdbc:mysql://project-db-cgi.smhrd.com:3307/MPD" />
       <property name="username" value="MPD"/>
       <property name="password" value="15987" />

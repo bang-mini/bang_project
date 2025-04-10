@@ -9,11 +9,11 @@
 		 parameterType : sql 구문에 연결되어야 하는 재료값
 	-->
 	<insert id="join" parameterType="com.pp.model.MemberDTO">
-		insert into Member values(#{email}, #{pw}, #{tel}, #{address})
+		insert into Member values(#{id}, #{pw}, #{name}, #{nikname}, #{email}, #{birthday})
 	</insert>
 	
 	<!-- 로그인이가능한 sql 문장 -->
-	<select id="login" parameterType="com.pp.model.MemberDTO"
+	<!-- <select id="login" parameterType="com.pp.model.MemberDTO"
 		resultType="com.pp.model.MemberDTO">
 		select * from Member where email=#{email} and pw=#{pw} 
 	</select>
@@ -35,7 +35,7 @@
 		select * from Member where email=#{email}
 		
 	</select>
-	
+	 -->
 
 </mapper>
 
